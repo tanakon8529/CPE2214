@@ -1,13 +1,21 @@
 #include<stdio.h>
+#include<string.h>
 
 
 int main(){
-    int n;
+    char *str1 = "ru engineering";
+    int i = 0, count = 0;
+    char ch = 'e';
 
-    for (n = 1;  n < 11; ++n)
+    while (str1[i] != '\0')
     {
-        printf("Hello world %d \n", n);
+        if(str1[i] == ch)
+        {
+            count++;
+        }
+        i++;
     }
-
+    printf("Found %c = %d \n", ch, count);
     return 0;
+    
 }
